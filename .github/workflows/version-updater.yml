@@ -1,0 +1,23 @@
+name: Commit Changes
+on:
+  push:
+    branches:
+      - main
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Add changes
+      run: |
+        # git config --global user.email "you@example.com"
+        # git config --global user.name "Your Name"
+        git add .
+    - name: Commit changes
+      run: |
+        git commit -m "Update changes"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
