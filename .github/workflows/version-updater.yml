@@ -11,8 +11,12 @@ jobs:
       uses: actions/checkout@v2
     - name: Add changes
       run: |
-        # git config --global user.email "you@example.com"
-        # git config --global user.name "Your Name"
+        git config --global user.email "srirambtecit@gmail.com"
+        git config --global user.name "Sriram Muthaiah"
+        fname=`date "+%Y%m%d_%H%M%S"`
+        date > dd.$fname
+        echo '' >> dd.$fname
+        cal >> dd.$fname
         git add .
     - name: Commit changes
       run: |
