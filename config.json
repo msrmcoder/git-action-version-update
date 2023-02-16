@@ -1,4 +1,5 @@
 {
 	"name": "Test file",
+	"module": "node-module",
 	"AppVersion": "0.1.0"
 }
